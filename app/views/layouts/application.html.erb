@@ -8,68 +8,13 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
   <body>
-    <header>
-      <ul id="dropdown1" class="dropdown-content">
-        <li><a href="#!">one</a></li>
-        <li><a href="#!">two</a></li>
-        <li class="divider"></li>
-        <li><a href="#!">three</a></li>
-      </ul>
-      <ul id="dropdown2" class="dropdown-content">
-        <li><a href="#!">one</a></li>
-        <li><a href="#!">two</a></li>
-        <li class="divider"></li>
-        <li><a href="#!">three</a></li>
-      </ul>
-      <ul class="sidenav" id="mobile-demo">
-        <li><a href="#">Courses</a></li>
-        <li><a href="#">Enrollments </a></li>
-        <li><a class="dropdown-trigger" href="#!" data-target="dropdown2">Account<i class="material-icons right">arrow_drop_down</i></a></li>
-      </ul>
-      <nav> 
-        <div class="container">
-          <div class="nav-wrapper">
-            <a href="#" class="brand-logo">Logo</a>
-            <ul id="nav-mobile" class="right hide-on-med-and-down">
-              <li><%= link_to 'Home', root_path%></li>
-              <li><%= link_to 'About', about_path%></li>
-              <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Account<i class="material-icons right">arrow_drop_down</i></a></li>
-            </ul>
-            <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-          </div>
-        </div>
-      </nav>
-    </header>
+    <%= render 'layouts/nav'%>
     <main>
       <div class="container">
         <%= yield %>
       </div>
     </main>
-    <footer class="page-footer">
-      <div class="container">
-        <div class="row">
-          <div class="col l6 s12">
-            <h5 class="white-text">TechUni</h5>
-            <p class="grey-text text-lighten-4">The Future of Development Training</p>
-          </div>
-          <div class="col l4 offset-l2 s12">
-            <h5 class="white-text">Information</h5>
-            <ul>
-              <li><a class="grey-text text-lighten-3" href="#!">Help</a></li>
-              <li><a class="grey-text text-lighten-3" href="#!">About</a></li>
-              <li><a class="grey-text text-lighten-3" href="#!">Contact Us</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div class="footer-copyright">
-        <div class="container">
-        © 2018 TechUni
-        <a class="grey-text text-lighten-4 right" href="#!">About</a>
-        </div>
-      </div>
-    </footer>
+    <%= render 'layouts/footer' %>
   </body>
 </html>
