@@ -33,7 +33,6 @@ class StudentsController < ApplicationController
   end 
 
   def update
-    
     if @student.update(student_params)
       flash[:notice] = "You have successfully updated your profile"
       redirect_to @student
@@ -41,6 +40,7 @@ class StudentsController < ApplicationController
       render 'edit'
     end 
   end 
+
 
   private
 
