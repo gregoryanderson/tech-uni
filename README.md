@@ -1,24 +1,5 @@
-# README
+# Tech University
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A Rails application that helps student enroll for courses online! The front-end views utilize Materialize-CSS for a sleek stylish look. Once on the application, use the username, 'guest@example.com' and the password, 'password', in order to navigate through the functionality of the app- Thanks for visiting!
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+https://tech-uni.herokuapp.com/
