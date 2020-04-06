@@ -18,7 +18,7 @@ class StudentCoursesController < ApplicationController
     course_to_remove = StudentCourse.where(course: course, student: current_user)
     if course_to_remove
       StudentCourse.delete(course_to_remove)
-      flash[:notice] = "You have successfully unenrolled in #{course_to_remove.name}"
+      flash[:notice] = "You have successfully unenrolled in #{course.name}"
       redirect_to current_user
     else 
       flash[:notice] = "Something went wrong with your unenrollment"

@@ -8,9 +8,9 @@
           <% if @student.courses.empty? %>
             None
           <% else %>
-            <ul>
+            <ul class="profile_ul">
               <% @student.courses.each do |course| %>
-                  <li><%= course.name%>
+                  <li><%= course.name%>    |      <%=link_to "Unenroll", course_unenroll_path(course_id: course.id), method: :delete, class: "rails-links" %></li>
                 <%end%>
             </ul>
           <% end %>
