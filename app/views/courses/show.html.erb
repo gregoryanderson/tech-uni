@@ -1,0 +1,21 @@
+<div class="row sign-up-form">
+  <div class="col s6 m6">
+    <div class="card teal darken-1">
+      <div class="card-content white-text">
+        <span class="card-title"><%= @course.short_name %></span>
+        <h6><%= @course.name %></h6>
+        <p>Current Students:
+          <% if @course.students.empty? %>
+            None
+          <% else %>
+            <ul>
+              <% @course.students.each do |student| %>
+                  <li><%= student.name%>
+                <%end%>
+            </ul>
+          <% end %>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
